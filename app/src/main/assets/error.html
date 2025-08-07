@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connection Error</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1976D2, #0D47A1);
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .error-container {
+            background-color: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            overflow: hidden;
+        }
+        .error-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, #FF9800, #F44336);
+        }
+        .error-icon {
+            font-size: 70px;
+            margin-bottom: 25px;
+            color: #F44336;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        h1 {
+            color: #1976D2;
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-size: 28px;
+        }
+        p {
+            margin-bottom: 30px;
+            line-height: 1.7;
+            color: #555;
+            font-size: 16px;
+        }
+        .retry-button {
+            background: linear-gradient(90deg, #2196F3, #1976D2);
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+            display: inline-block;
+        }
+        .retry-button:hover {
+            background: linear-gradient(90deg, #1976D2, #0D47A1);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+        }
+        .status-indicator {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .dot {
+            height: 8px;
+            width: 8px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .dot:nth-child(1) {
+            animation: blink 1.4s infinite;
+            animation-delay: 0s;
+        }
+        .dot:nth-child(2) {
+            animation: blink 1.4s infinite;
+            animation-delay: 0.2s;
+        }
+        .dot:nth-child(3) {
+            animation: blink 1.4s infinite;
+            animation-delay: 0.4s;
+        }
+        @keyframes blink {
+            0% { background-color: #bbb; }
+            50% { background-color: #1976D2; }
+            100% { background-color: #bbb; }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-icon">&#9888;</div>
+        <h1>Connection Error</h1>
+        <p>We're having trouble connecting to the server. Please check your internet connection and try again.</p>
+        <button class="retry-button" onclick="window.location.href='https://agentmanagment.github.io/'">Retry Connection</button>
+        <div class="status-indicator">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+</body>
+</html>

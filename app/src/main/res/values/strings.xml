@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Web Management</string>
+    <string name="app_logo_description">App Logo</string>
+    <string name="app_tagline">Premium Web Experience</string>
+    <string name="app_loading_text">Loading your premium experience…</string>
+    <string name="connection_error">Connection Error</string>
+    <string name="connection_error_message">We're having trouble connecting to the server. Please check your internet connection and try again.</string>
+    <string name="retry_connection">Retry Connection</string>
+</resources>
